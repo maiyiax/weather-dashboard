@@ -1,13 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weather Dashboard</title>
 </head>
+
 <body>
+    <header class="text-center text-light bg-dark">Weather Dashboard</header>
+    <main class="row">
+        <!-- left column/search box -->
+        <!-- add input field to search by city -->
+        <form class="col">
+            <div class="col-md-6 mb-3">
+                <label for="cityName">Search for a City:</label>
+                <div id="search-box">
+                    <input type="text" class="form-control" id="cityName" placeholder="City Name" required>
+                    <button class="btn"><span class="oi oi-magnifying-glass"></span></button>
+                </div>
+            </div>
+            <div class="searchHistory">
+
+            </div>
+        </form>
+
+
+        <!-- right column/results -->
+        <div id="results" class="col">
+            
+            <!-- top row/displays current conditions -->
+            <div class="row" id="current">
+                <h2 class="currentCity"></h2>
+            </div>
+
+            <!-- bottom row/displays 5 day forcast -->
+            <div class="row" id="forecast">
+                <h3 class="row">5-Day Forecast</h2>
+                <div class="day1 col"></div>
+                <div class="day2 col"></div>
+                <div class="day3 col"></div>
+                <div class="day4 col"></div>
+                <div class="day5 col"></div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- script links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="./assets/js/script.js"></script>
+
 </body>
+
 </html>
